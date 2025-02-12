@@ -1,0 +1,10 @@
+/* 平滑隐藏动画 */
+.aplayer.aplayer-fixed {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.aplayer.aplayer-fixed.hide {
+  opacity: 0;
+  transform: translateY(100%);
+  pointer-events: none;
+}
