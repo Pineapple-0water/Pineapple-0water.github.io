@@ -1,0 +1,47 @@
+/* 整体容器美化 */
+.aplayer {
+  background: linear-gradient(45deg, #fff5f8 0%, #ffe6f0 100%) !important;
+  border-radius: 15px !important;
+  box-shadow: 0 10px 30px rgba(255, 52, 102, 0.2) !important;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+}
+
+/* 悬停发光效果 */
+.aplayer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 52, 102, 0.3) !important;
+}
+
+/* 进度条改造为爱心形状 */
+.aplayer-bar-wrap {
+  height: 4px !important;
+}
+.aplayer-played::after {
+  content: '❤';
+  position: absolute;
+  right: -8px;
+  top: -6px;
+  font-size: 16px;
+  color: #ff3466;
+}
+
+/* 按钮颜色 */
+.aplayer-icon path {
+  fill: #ff3466 !important;
+}
+
+/* 歌词高亮 */
+.aplayer-lrc-current {
+  text-shadow: 0 0 10px rgba(255, 52, 102, 0.5);
+  font-size: 18px !important;
+  color: #ff3466 !important;
+}
+
+/* 手机适配 */
+@media (max-width: 768px) {
+  .aplayer {
+    border-radius: 0 !important;
+    margin: 10px -15px;
+  }
+}
