@@ -1,0 +1,39 @@
+/* 垂直排列核心代码 */
+.gallery-group {
+  display: flex !important;
+  flex-direction: column !important;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  width: 100% !important;
+  margin: 10px 0 !important;
+  padding: 0 !important;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-item img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover;
+  aspect-ratio: 3/4; /* 统一图片比例 */
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .gallery-group {
+    padding: 0 15px;
+  }
+  .gallery-item {
+    margin: 8px 0 !important;
+    border-radius: 6px;
+  }
+}
