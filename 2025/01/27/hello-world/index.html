@@ -159,7 +159,7 @@
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
-}</script><link rel="stylesheet" href="/css/gallery.css"><link rel="stylesheet" href="/css/aplayer.css"><script src="https://webapi.amap.com/maps?v=2.0&key=b38efc223fc17e146dbfa53059269de5"></script>[object Object]<meta name="generator" content="Hexo 7.3.0"></head><body><script>window.paceOptions = {
+}</script><link rel="stylesheet" href="/css/gallery.css"><link rel="stylesheet" href="/css/aplayer.css"><link rel="stylesheet" href="/css/love-map.css"><meta name="generator" content="Hexo 7.3.0"></head><body><script>window.paceOptions = {
   restartOnPushState: false
 }
 
@@ -284,7 +284,10 @@ btf.addGlobalFn('pjaxSend', () => {
   } else {
     window.loadOtherComment = loadGitalk
   }
-})()</script></div><div class="aplayer" data-id="13239933041" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><script src="/js/heart-fall.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+})()</script></div><div class="aplayer" data-id="13239933041" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div><script src="/js/heart-fall.js"></script><script> document.addEventListener('DOMContentLoaded', () => { const isMusicPage = document.getElementById('music-page-flag'); const globalPlayer = document.querySelector('.aplayer.aplayer-fixed');
+if(isMusicPage && globalPlayer) { // 添加动画隐藏类 globalPlayer.classList.add('hide');
+// 页面离开时恢复 window.addEventListener('beforeunload', () => { globalPlayer.classList.remove('hide'); });
+// 处理浏览器标签切换 document.addEventListener('visibilitychange', () => { if(document.visibilityState === 'visible') { globalPlayer.classList.remove('hide'); } }); } }); </script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.4/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = true;
 POWERMODE.mobile = true;
 document.body.addEventListener('input', POWERMODE);
